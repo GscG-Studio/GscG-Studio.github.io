@@ -661,45 +661,42 @@
             color: var(--text-light);
         }
         
-        /* 联系区域样式 */
-        .contact-form {
-            max-width: 700px;
-            margin: 0 auto;
+        /* 联系信息区域样式 */
+        .contact-info {
+            text-align: center;
+            padding: 60px 0;
+            background-color: var(--secondary);
+            border-radius: 10px;
+            margin-top: 50px;
             position: relative;
             z-index: 1;
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--text-light);
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 15px;
-            background-color: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(138, 43, 226, 0.3);
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s, box-shadow 0.3s;
-            color: var(--text);
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
         }
         
-        .form-control:focus {
-            border-color: var(--neon-blue);
-            outline: none;
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
         }
         
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
+        .contact-info p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .email-link {
+            color: var(--neon-blue);
+            text-decoration: none;
+            font-weight: bold;
+            transition: text-shadow 0.3s;
+        }
+        
+        .email-link:hover {
+            text-shadow: 0 0 10px var(--neon-blue);
         }
         
         /* 页脚样式 */
@@ -1000,7 +997,6 @@
                     <li><a href="#portfolio">游戏作品</a></li>
                     <li><a href="#novels">小说作品</a></li>
                     <li><a href="#features">创作特点</a></li>
-                    <li><a href="#contact">联系我们</a></li>
                 </ul>
             </nav>
         </div>
@@ -1137,12 +1133,13 @@
                         <span class="novel-series">海洋求生系列</span>
                         <h3>海洋求生：漂流开端</h3>
                         <p>一场海难让主角流落荒岛，面对有限的资源和未知的危险，他必须学会在海洋环境中生存下去，同时揭开岛屿隐藏的秘密。</p>
+                        <p style="font-style: italic; color: var(--neon-blue); margin-top: 10px;">可以在网页中的目录选集</p>
                         <div class="novel-stats">
                             <span><i class="fas fa-book-open"></i> 已更新至30集</span>
                             <span><i class="fas fa-star"></i> 4.8分</span>
                             <span><i class="fas fa-sync-alt"></i> 持续更新中</span>
                         </div>
-                        <a href="#" class="btn btn-novel">阅读小说</a>
+                        <a href="https://www.bilibili.com/opus/1122627803240464388?from=search&spm_id_from=333.337.0.0" class="btn btn-novel">阅读小说</a>
                     </div>
                 </div>
             </div>
@@ -1177,41 +1174,11 @@
                     <p>作品不仅带来乐趣，还能激发对编程和写作的兴趣，培养逻辑思维和创造力。</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 联系区域 -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>联系我们</h2>
-            </div>
-            <div class="contact-form">
-                <form>
-                    <div class="form-group">
-                        <label for="name">姓名</label>
-                        <input type="text" id="name" class="form-control" placeholder="请输入您的姓名">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">邮箱</label>
-                        <input type="email" id="email" class="form-control" placeholder="请输入您的邮箱">
-                    </div>
-                    <div class="form-group">
-                        <label for="interest">感兴趣的内容</label>
-                        <select id="interest" class="form-control">
-                            <option value="">请选择</option>
-                            <option value="game">游戏作品</option>
-                            <option value="novel">小说作品</option>
-                            <option value="cooperation">合作意向</option>
-                            <option value="other">其他</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">留言</label>
-                        <textarea id="message" class="form-control" placeholder="请告诉我们您的想法或合作意向"></textarea>
-                    </div>
-                    <button type="submit" class="btn">发送消息</button>
-                </form>
+            
+            <!-- 联系信息区域 -->
+            <div class="contact-info">
+                <h3>联系我们</h3>
+                <p>如果需要联系我们，请向 <a href="mailto:xihe_05@outlook.com?subject=联系枪影创游" class="email-link">xihe_05@outlook.com</a> 发送一封邮件，标题为：<strong>联系枪影创游</strong>。我们会尽快回复您的邮件。</p>
             </div>
         </div>
     </section>
@@ -1237,7 +1204,6 @@
                         <li><a href="#portfolio">游戏作品</a></li>
                         <li><a href="#novels">小说作品</a></li>
                         <li><a href="#features">创作特点</a></li>
-                        <li><a href="#contact">联系我们</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
